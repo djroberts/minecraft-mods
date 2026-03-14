@@ -26,4 +26,5 @@ Thumbs.db
 # Other
 *.log
 *.jar
+!gradle/wrapper/gradle-wrapper.jar
 mcmodsrepo/

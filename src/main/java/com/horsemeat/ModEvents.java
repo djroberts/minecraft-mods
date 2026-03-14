@@ -5,14 +5,15 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
 import net.minecraft.util.RandomSource;
 
+@Mod.EventBusSubscriber(modid = HorseMeatMod.MOD_ID)
 public class ModEvents {
 
     @SubscribeEvent
-    public void onLivingDrops(LivingDropsEvent event) {
+    public static void onLivingDrops(LivingDropsEvent event) {
         if (event.getEntity() instanceof Horse horse) {
             RandomSource random = horse.getRandom();
 

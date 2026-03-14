@@ -8,8 +8,7 @@ public class HorseMeatMod {
     public static final String MOD_ID = "horsemeat";
     
     public HorseMeatMod() {
-        // Register event handler manually
-        MinecraftForge.EVENT_BUS.register(ModEvents.class);
+        MinecraftForge.EVENT_BUS.register(new ModEvents());
         System.out.println("Horse Meat Mod loaded! Extra meat drops from horses!");
     }
 }

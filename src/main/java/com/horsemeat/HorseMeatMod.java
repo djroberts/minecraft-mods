@@ -1,6 +1,5 @@
 package com.horsemeat;
 
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod(HorseMeatMod.MOD_ID)

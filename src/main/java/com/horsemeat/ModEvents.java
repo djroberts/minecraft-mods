@@ -7,14 +7,14 @@ import net.minecraft.world.item.Items;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-import java.util.Random;
+import net.minecraft.util.RandomSource;
 
 public class ModEvents {
 
     @SubscribeEvent
     public void onLivingDrops(LivingDropsEvent event) {
         if (event.getEntity() instanceof Horse horse) {
-            Random random = horse.getRandom();
+            RandomSource random = horse.getRandom();
 
             if (random.nextDouble() < 0.5) {
                 event.getDrops().add(new ItemEntity(

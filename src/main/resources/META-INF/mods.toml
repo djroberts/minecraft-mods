@@ -3,7 +3,7 @@
 # The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
 modLoader="javafml"
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[4,)"
+loaderVersion="[61,)"
 # The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
 license="All Rights Reserved"
 # A URL to refer people to when problems occur with this mod
@@ -42,7 +42,7 @@ modId="forge"
 # Does this dependency have to exist - if not, ordering below must be specified
 mandatory=true
 # The version range of the dependency
-versionRange="[47.0.0,)"
+versionRange="[61.0.0,)"
 # An ordering relationship for the dependency - BEFORE or AFTER required if the dependency is not mandatory
 # BEFORE - This mod is loaded BEFORE the dependency
 # AFTER - This mod is loaded AFTER the dependency

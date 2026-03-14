@@ -1,11 +1,12 @@
 package com.horsemeat;
 
-import net.minecraft.world.entity.animal.horse.Horse;
+import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import net.minecraft.util.RandomSource;
 
@@ -14,7 +15,7 @@ public class ModEvents {
 
     @SubscribeEvent
     public static void onLivingDrops(LivingDropsEvent event) {
-        if (event.getEntity() instanceof Horse horse) {
+        if (event.getEntity() instanceof AbstractHorse horse) {
             RandomSource random = horse.getRandom();
 
             if (random.nextDouble() < 0.5) {

@@ -16,8 +16,7 @@ println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty '
 sourceSets.main.java.srcDirs += 'src/main/java'
 
 minecraft {
-    mappings channel: 'official'
-    version = '1.21.1'
+    mappings channel: mapping_channel, version: mapping_version
 }
 
 dependencies {

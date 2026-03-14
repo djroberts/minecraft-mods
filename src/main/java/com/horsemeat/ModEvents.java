@@ -6,7 +6,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.entity.EntityType;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.SubscribeEvent;
 
 import net.minecraft.util.RandomSource;
 

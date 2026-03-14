@@ -4,11 +4,13 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.entity.EntityType;
-import net.minecraftforge.event.entity.living.LivingDropsEvent;
-import net.minecraft.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.minecraft.util.RandomSource;
 
 public class ModEvents {
+
+    @SubscribeEvent
     public static void onLivingDrops(LivingDropsEvent event) {
         if (event.getEntity().getType() == EntityType.HORSE) {
             var horse = event.getEntity();

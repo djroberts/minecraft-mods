@@ -1,35 +1,73 @@
 plugins {
+    id 'java-library'
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'net.neoforged.moddev' version '2.0.113'
 }
 
-group = "com.horsemeat"
-version = "1.0.0"
-archivesBaseName = "horsemeat"
+version = '1.0.0'
+group = 'com.horsemeat'
+
+base {
+    archivesName = 'horsemeat'
+}
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+neoForge {
+    version = '21.1.38'
+    runs {
+        client {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'horsemeat'
+        }
+        server {
+            server()
+            programArgument '--nogui'
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'horsemeat'
+        }
+    }
+    mods {
+        horsemeat {
+            sourceSet sourceSets.main
+        }
     }
 }
 
 repositories {
-    maven {
-        url = "https://maven.minecraftforge.net/"
-    }
     mavenCentral()
 }
 
 dependencies {
-    minecraft "net.minecraftforge:forge:1.21.11-61.1.3"
+    // NeoForge modding dependencies
 }
 
-minecraft {
-    mappings channel: "official", version: "1.21.11"
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+            minecraft_version: '1.21.1',
+            minecraft_version_range: '[1.21.1,1.22)',
+            neo_version: '21.1.38',
+            neo_version_range: '[21.1.38,)',
+            loader_version_range: '[4,)',
+            mod_id: 'horsemeat',
+            mod_name: 'Horse Meat Mod',
+            mod_license: 'All Rights Reserved',
+            mod_version: '1.0.0',
+            mod_authors: 'Daniel Roberts',
+            mod_description: 'Extra meat drops from horses!'
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand replaceProperties
+    }
 }
 
-tasks.jar {
-    from(sourceSets.main.output)
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
 }

@@ -6,6 +6,8 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.entity.EntityType;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraft.util.RandomSource;
 
 @Mod.EventBusSubscriber(modid = HorseMeatMod.MOD_ID)

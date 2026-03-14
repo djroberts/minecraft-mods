@@ -7,7 +7,7 @@ buildscript {
     }
     dependencies {
         // Use ForgeGradle 6.x for Minecraft 1.21.x
-        classpath "net.minecraftforge.gradle:ForgeGradle:6.1.0"
+        classpath "net.minecraftforge.gradle:ForgeGradle:6.0.1"
     }
 }
 

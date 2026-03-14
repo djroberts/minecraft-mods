@@ -1,12 +1,12 @@
 pluginManagement {
     repositories {
-        gradlePluginPortal()             // For general plugins
-        maven {                          // Forge Maven repository (needed for ForgeGradle 6)
+        gradlePluginPortal()
+        maven {
             name = 'MinecraftForge'
             url = 'https://maven.minecraftforge.net/'
         }
-        mavenCentral()                   // Optional, just in case dependencies are there
+        mavenCentral()
     }
 }
 
-rootProject.name = "horsemeat"          // Your mod project name
+rootProject.name = "horsemeat"

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:item",
+  "value": [
+    {
+      "id": "horsemeat:horse_sausage",
+      "components": {
+        "minecraft:food": {
+          "nutrition": 6,
+          "saturation": 0.8
+        }
+      }
+    },
+    {
+      "id": "horsemeat:frikandel",
+      "components": {
+        "minecraft:food": {
+          "nutrition": 8,
+          "saturation": 1.0
+        }
+      }
+    }
+  ]
+}

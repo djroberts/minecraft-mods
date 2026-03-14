@@ -1,0 +1,29 @@
+# Eclipse
+.project
+.classpath
+.cproject
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+.gradle/
+
+# Minecraft
+run/
+!run/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Other
+*.log
+*.jar
+mcmodsrepo/

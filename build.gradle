@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'net.minecraftforge.gradle' version '6.0.0-milestone.8'
 }
 
 group = 'com.horsemeat'
@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-    minecraft "net.minecraftforge:forge:1.21.1-61.1.3"
+    minecraft 'net.minecraftforge:forge:1.21.1-61.1.3'
 }
 
 minecraft {
@@ -28,7 +28,6 @@ minecraft {
     mappings channel: 'official', version: '1.21.1'
 }
 
-// Optional: jar task to include resources and META-INF mods.toml
 tasks.jar {
     from(sourceSets.main.output)
     manifest {

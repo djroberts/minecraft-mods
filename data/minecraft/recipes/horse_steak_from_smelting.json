@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "horsemeat:raw_horse_meat"
+  },
+  "result": {
+    "id": "horsemeat:horse_steak"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

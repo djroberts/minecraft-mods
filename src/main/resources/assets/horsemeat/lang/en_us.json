@@ -1,3 +1,6 @@
 {
-  "item.horsemeat.horse_sausage": "Horse Sausage"
+  "item.horsemeat.raw_horse_meat": "Raw Horse Meat",
+  "item.horsemeat.horse_steak": "Horse Steak",
+  "item.horsemeat.horse_sausage": "Horse Sausage",
+  "itemGroup.horsemeat.horse_meat": "Horse Meat"
 }

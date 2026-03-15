@@ -1,11 +1,24 @@
 # Horse Meat Mod
 
-A Minecraft Forge mod for version 1.21.1 that adds extra meat drops from horses.
+A Minecraft Forge mod for version 1.21.1 that adds horse meat items and cooking mechanics.
 
 ## Features
 
-- **50% chance** for 1-3 cooked beef (horse sausage) when killing horses
-- **30% chance** for 1-2 cooked porkchop (frikandel) when killing horses
+- **Raw Horse Meat** - Dropped from horses when killed
+- **Horse Steak** - Cooked from raw horse meat using furnace or campfire (sneak + right-click)
+- **Frikandel** - Cooked from raw horse meat using smoker (sneak + right-click)
+- **Custom Cooking System** - Sneak + right-click on cooking blocks with raw horse meat:
+  - Furnace/Campfire → Horse Steak
+  - Smoker → Frikandel
+- **Food & Drink Category** - All items appear in the standard Food & Drink creative tab
+
+## Items
+
+| Item | Food Value | Saturation | How to Obtain |
+|------|------------|------------|---------------|
+| Raw Horse Meat | 3 | 0.3 | Dropped from horses |
+| Horse Steak | 8 | 0.8 | Cook raw horse meat in furnace/campfire |
+| Frikandel | 6 | 0.6 | Cook raw horse meat in smoker |
 
 ## Installation
 

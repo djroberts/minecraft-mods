@@ -1,5 +1,6 @@
 {
   "type": "minecraft:campfire_cooking",
+  "category": "food",
   "ingredient": "horsemeat:raw_horse_meat",
   "result": {
     "id": "horsemeat:horse_steak"

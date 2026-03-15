@@ -1,5 +1,5 @@
-modLoader="neoforge"
-loaderVersion="[4,)"
+modLoader="javafml"
+loaderVersion="[1,)"
 license="All Rights Reserved"
 issueTrackerURL="https://github.com/djroberts/minecraft-mods/issues"
 
@@ -10,19 +10,16 @@ displayName="Horse Meat Mod"
 authors="Daniel Roberts"
 description="Extra meat drops from horses!"
 
-[[mixins]]
-config="horsemeat.mixins.json"
-
 [[dependencies.horsemeat]]
 modId="neoforge"
 type="required"
-versionRange="[21.1.38,)"
+versionRange="[21.11.38-beta,)"
 ordering="NONE"
 side="BOTH"
 
 [[dependencies.horsemeat]]
 modId="minecraft"
 type="required"
-versionRange="[1.21.1,1.22)"
+versionRange="[1.21.3,1.22)"
 ordering="NONE"
 side="BOTH"

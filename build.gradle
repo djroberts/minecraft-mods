@@ -3,7 +3,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.113'
+    id 'net.neoforged.moddev' version '2.0.140'
 }
 
 version = '1.0.0'
@@ -20,7 +20,7 @@ java {
 }
 
 neoForge {
-    version = '21.1.38'
+    version = '21.11.38-beta'
     runs {
         client {
             client()
@@ -49,10 +49,10 @@ dependencies {
 
 tasks.withType(ProcessResources).configureEach {
     var replaceProperties = [
-            minecraft_version: '1.21.1',
-            minecraft_version_range: '[1.21.1,1.22)',
-            neo_version: '21.1.38',
-            neo_version_range: '[21.1.38,)',
+            minecraft_version: '1.21.11',
+            minecraft_version_range: '[1.21.3,1.22)',
+            neo_version: '21.11.38-beta',
+            neo_version_range: '[21.11.38-beta,)',
             loader_version_range: '[4,)',
             mod_id: 'horsemeat',
             mod_name: 'Horse Meat Mod',

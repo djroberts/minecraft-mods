@@ -42,8 +42,8 @@ jobs:
     - name: Extract version info
       id: versions
       run: |
-        MC_VERSION=$(grep "minecraft_version.*:" build.gradle | sed "s/.*'\(.*\)'.*/\1/")
-        NEO_VERSION=$(grep "neo_version.*:" build.gradle | sed "s/.*'\(.*\)'.*/\1/")
+        MC_VERSION=$(grep "minecraft_version:" build.gradle | grep -v "minecraft_version_range" | sed "s/.*'\(.*\)'.*/\1/")
+        NEO_VERSION=$(grep "neo_version:" build.gradle | grep -v "neo_version_range" | sed "s/.*'\(.*\)'.*/\1/")
         echo "minecraft_version=$MC_VERSION" >> $GITHUB_OUTPUT
         echo "neoforge_version=$NEO_VERSION" >> $GITHUB_OUTPUT
 

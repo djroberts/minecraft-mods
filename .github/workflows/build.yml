@@ -39,12 +39,20 @@ jobs:
         VERSION=$(date +%Y.%m.%d-%H%M)
         echo "version=$VERSION" >> $GITHUB_OUTPUT
 
+    - name: Extract version info
+      id: versions
+      run: |
+        MC_VERSION=$(grep "minecraft_version.*:" build.gradle | sed "s/.*'\(.*\)'.*/\1/")
+        NEO_VERSION=$(grep "neo_version.*:" build.gradle | sed "s/.*'\(.*\)'.*/\1/")
+        echo "minecraft_version=$MC_VERSION" >> $GITHUB_OUTPUT
+        echo "neoforge_version=$NEO_VERSION" >> $GITHUB_OUTPUT
+
     - name: Build with Gradle
       run: ./gradlew build
 
-    - name: Rename JAR to include modloader
+    - name: Rename JAR to include versions
       run: |
-        mv build/libs/horsemeat-*.jar build/libs/horsemeat-neoforge.jar
+        mv build/libs/horsemeat-*.jar "build/libs/horsemeat-mc${{ steps.versions.outputs.minecraft_version }}-neoforge${{ steps.versions.outputs.neoforge_version }}-${{ steps.version.outputs.version }}.jar"
 
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v1

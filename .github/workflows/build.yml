@@ -1,9 +1,7 @@
-name: Build and Test
+name: Build and Release
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ main ]
 
 jobs:
@@ -32,11 +30,32 @@ jobs:
     - name: Make gradlew executable
       run: chmod +x gradlew
 
+    - name: Generate timestamp version
+      id: version
+      run: |
+        VERSION=$(date +%Y.%m.%d-%H%M)
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+
     - name: Build with Gradle
       run: ./gradlew build
 
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v4
+    - name: Rename JAR to include modloader
+      run: |
+        mv build/libs/horsemeat-*.jar build/libs/horsemeat-neoforge.jar
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
       with:
-        name: build-artifacts
-        path: build/libs/
+        tag_name: v${{ steps.version.outputs.version }}
+        name: Horse Meat Mod v${{ steps.version.outputs.version }}
+        body: |
+          Auto-built release from commit ${{ github.sha }}
+          
+          Built on: ${{ steps.version.outputs.version }}
+          Commit: ${{ github.sha }}
+        files: |
+          build/libs/*.jar
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

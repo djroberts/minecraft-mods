@@ -7,7 +7,7 @@ issueTrackerURL="https://github.com/djroberts/minecraft-mods/issues"
 modId="horsemeat"
 version="1.0.0"
 displayName="Horse Meat Mod"
-authors="Daniel Roberts"
+authors="Gargoyle"
 description="Extra meat drops from horses!"
 
 [[dependencies.horsemeat]]

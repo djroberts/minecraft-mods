@@ -58,7 +58,7 @@ tasks.withType(ProcessResources).configureEach {
             mod_name: 'Horse Meat Mod',
             mod_license: 'All Rights Reserved',
             mod_version: '1.0.0',
-            mod_authors: 'Daniel Roberts',
+            mod_authors: 'Gargoyle',
             mod_description: 'Extra meat drops from horses!'
     ]
     inputs.properties replaceProperties

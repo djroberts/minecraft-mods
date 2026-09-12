@@ -1,6 +1,6 @@
 # Horse Meat Mod
 
-A Minecraft Forge mod for version 1.21.1 that adds horse meat items and cooking mechanics.
+A Minecraft NeoForge mod for version 26.2 that adds horse meat items and cooking mechanics.
 
 ## Features
 
@@ -24,7 +24,7 @@ A Minecraft Forge mod for version 1.21.1 that adds horse meat items and cooking 
 
 1. Download the latest release from the [Releases page](https://github.com/djroberts/minecraft-mods/releases)
 2. Place the JAR file in your Minecraft mods folder
-3. Launch Minecraft with Forge 1.21.1
+3. Launch Minecraft with NeoForge 26.2.0.87
 
 ## Building
 
@@ -42,9 +42,9 @@ export JAVA_HOME=/path/to/java21
 
 ## Requirements
 
-- Minecraft 1.21.1
-- Forge 52.1.10
-- Java 21
+- Minecraft 26.2
+- NeoForge 26.2.0.87
+- Java 25
 
 ## License
 

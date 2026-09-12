@@ -7,7 +7,7 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.147'
 }
 
-version = '1.0.0'
+version = '1.0.1'
 group = 'com.horsemeat'
 
 base {
@@ -58,7 +58,7 @@ tasks.withType(ProcessResources).configureEach {
             mod_id: 'horsemeat',
             mod_name: 'Horse Meat Mod',
             mod_license: 'All Rights Reserved',
-            mod_version: '1.0.0',
+            mod_version: '1.0.1',
             mod_authors: 'Gargoyle',
             mod_description: 'Extra meat drops from horses!'
     ]

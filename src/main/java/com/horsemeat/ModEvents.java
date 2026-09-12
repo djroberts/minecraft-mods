@@ -1,7 +1,7 @@
 package com.horsemeat;
 
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -10,7 +10,7 @@ public class ModEvents {
 
     @SubscribeEvent
     public static void onLivingDeath(LivingDeathEvent event) {
-        if (event.getEntity().getType() == EntityType.HORSE) {
+        if (BuiltInRegistries.ENTITY_TYPE.getKey(event.getEntity().getType()).getPath().equals("horse")) {
             var horse = event.getEntity();
             var level = horse.level();
             

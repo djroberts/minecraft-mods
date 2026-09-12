@@ -13,13 +13,13 @@ description="Extra meat drops from horses!"
 [[dependencies.horsemeat]]
 modId="neoforge"
 type="required"
-versionRange="[21.11.38-beta,)"
+versionRange="[26.2.0.87,)"
 ordering="NONE"
 side="BOTH"
 
 [[dependencies.horsemeat]]
 modId="minecraft"
 type="required"
-versionRange="[1.21.3,1.22)"
+versionRange="[26.2,26.3)"
 ordering="NONE"
 side="BOTH"

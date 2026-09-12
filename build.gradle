@@ -1,9 +1,10 @@
+
 plugins {
     id 'java-library'
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.140'
+    id 'net.neoforged.moddev' version '2.0.147'
 }
 
 version = '1.0.0'
@@ -15,12 +16,12 @@ base {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(25)
     }
 }
 
 neoForge {
-    version = '21.11.38-beta'
+    version = '26.2.0.87'
     runs {
         client {
             client()
@@ -49,10 +50,10 @@ dependencies {
 
 tasks.withType(ProcessResources).configureEach {
     var replaceProperties = [
-            minecraft_version: '1.21.11',
-            minecraft_version_range: '[1.21.3,1.22)',
-            neo_version: '21.11.38-beta',
-            neo_version_range: '[21.11.38-beta,)',
+            minecraft_version: '26.2',
+            minecraft_version_range: '[26.2,26.3)',
+            neo_version: '26.2.0.87',
+            neo_version_range: '[26.2.0.87,)',
             loader_version_range: '[4,)',
             mod_id: 'horsemeat',
             mod_name: 'Horse Meat Mod',
@@ -71,3 +72,4 @@ tasks.withType(ProcessResources).configureEach {
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
+
